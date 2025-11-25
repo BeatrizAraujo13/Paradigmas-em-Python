@@ -26,7 +26,6 @@ class Dado:
 
 
   def _next(self):
-# LCG básico: state = (a*state + c) % m
    a = 1664525
    c = 1013904223
    m = 2 ** 32
@@ -36,4 +35,5 @@ class Dado:
 
   def rolar(self, lados=6):
    val = (self._next() % lados) + 1
+
    return val
